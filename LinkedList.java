@@ -46,8 +46,30 @@ sc.close();
     }
 public void deleteEnd()
     {
-        // TYPE YOUR CODE HERE
-    }
+      if (head == null) { 
+                System.out.println("List is empty"); 
+                        return; 
+                            } 
+
+                                if (head.next == null) { 
+                                        System.out.println("Deleted element: " + head.data);
+                                                head = null; 
+                                                        tail = null;
+                                                                return; 
+                                                                    } 
+
+                                                                        Node temp = head;
+                                                                            while (temp.next.next != null) { 
+                                                                                    temp = temp.next; 
+                                                                                        } 
+
+                                                                                            System.out.println("Deleted Element is:" + temp.next.data);
+                                                                                                temp.next = null; 
+                                                                                                    tail = temp;
+                                                                                                     
+
+      }
+    
 public void displayList() {
         Node current = head;
         while (current != null) {
@@ -56,4 +78,4 @@ public void displayList() {
         }
 System.out.println("null");
     }
- }
+}
